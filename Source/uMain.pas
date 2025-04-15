@@ -1,4 +1,4 @@
-unit uMain;
+Ôªøunit uMain;
 
 interface
 
@@ -11,8 +11,9 @@ uses
   Vcl.Forms,
   Vcl.Dialogs,
   Vcl.ExtCtrls,
+  Vcl.ExtDlgs,
   Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtDlgs;
+  Vcl.Imaging.pngimage;
 
 type
   TfrmMain = class(TForm)
@@ -32,10 +33,8 @@ type
     procedure btnExecuteClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
   private
-    { Private declarations }
     procedure GetZPLImage();
   public
-    { Public declarations }
   end;
 
 var
@@ -58,7 +57,7 @@ end;
 
 procedure TfrmMain.btnSaveClick(Sender: TObject);
 begin
-  SavePictureDialog1.FileName := '¿Ã∏ßæ¯¿Ω.png';
+  SavePictureDialog1.FileName := 'Ïù¥Î¶ÑÏóÜÏùå.png';
   if SavePictureDialog1.Execute(Handle) then
     Image1.Picture.SaveToFile(SavePictureDialog1.FileName);
 end;
